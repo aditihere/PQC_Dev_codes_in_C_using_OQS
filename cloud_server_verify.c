@@ -1,3 +1,5 @@
+Cloud server: checks signature before accepting the request 
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
