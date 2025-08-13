@@ -1,55 +1,40 @@
-Post-Quantum Cryptography (PQC) Security Suite
+🛡️ Post-Quantum Security Toolkit
 
-A collection of hands-on, production-ready implementations for building quantum-resilient authentication, encryption, and communication systems.
-This repository showcases practical usage of NIST-selected post-quantum algorithms such as Kyber (KEM) for key exchange and Dilithium (digital signatures), ensuring cryptographic security even in the era of large-scale quantum computing.
+This repo is a hands-on collection of real-world examples showing how to build applications that can stand up to the cryptographic challenges of the quantum era.
+From authentication systems to secure file sharing and encrypted messaging, everything here is designed to give you practical, working code for quantum-safe deployments — no toy examples, no skipped steps.
 
-Features
-1. PQC-Based Authentication for Cloud Applications
+🔹 What’s Inside
+1. PQC-based Authentication for Cloud Apps
 
-Secure client–server authentication using Dilithium signatures.
+A working setup for authenticating clients and servers using the Dilithium signature scheme.
+Keys are generated, signatures are created and verified, and secure sessions are established — all in one flow.
 
-Python-based implementation leveraging liboqs bindings.
+2. Kyber-Powered Secure Key Exchange
 
-End-to-end example with key generation, signing, verification, and session establishment.
+An implementation of the Kyber KEM that can be used alone or in a hybrid mode alongside classical encryption.
+Perfect for replacing RSA/ECC in any protocol that needs a future-proof handshake.
 
-2. Post-Quantum Secure Key Exchange (Kyber)
+3. Quantum-Safe File Encryption Tool
 
-Hybrid or standalone Kyber-based key encapsulation for secure channel setup.
+A simple command-line tool for encrypting and decrypting files with AES-256-GCM, where the symmetric key is exchanged securely via Kyber.
+Ideal for cloud storage or long-term backups.
 
-Resistant to Shor’s and Grover’s algorithms.
+4. API Authentication Without Secrets
 
-Integrates easily into TLS-like workflows.
+API requests are signed using Dilithium, so there’s no need for static tokens.
+It’s fast, verifiable, and immune to replay attacks.
 
-3. Post-Quantum Secure File Encryption Tool
+5. Encrypted Messaging & VPN with PQC Keys
 
-Symmetric encryption (AES-256-GCM) with Kyber-protected key exchange.
+A demo of how to establish VPN tunnels and peer-to-peer messaging channels using Kyber for the key exchange.
+Supports forward secrecy by re-keying regularly.
 
-CLI tool for file encryption/decryption.
+📚 Built With
 
-Suitable for cloud storage and secure backups.
+Languages: Python, C
 
-4. PQC-Based API Authentication
-
-API request signing with Dilithium.
-
-Tokenless, cryptographically-verified API access.
-
-Prevents replay attacks and credential theft.
-
-5. Quantum-Safe VPN & Encrypted Messaging
-
-VPN tunnel establishment using Kyber for initial key agreement.
-
-Encrypted peer-to-peer messaging with post-quantum keys.
-
-Supports forward secrecy with frequent re-keying.
-
-Tech Stack
-
-Languages: Python (with liboqs), C (for low-level PQC bindings)
-
-Libraries: Open Quantum Safe (liboqs), PyCryptodome, Flask
+Libraries: liboqs (Open Quantum Safe), PyCryptodome, Flask
 
 Algorithms: CRYSTALS-Kyber, CRYSTALS-Dilithium
 
-Protocols: Hybrid encryption (Kyber + AES), PQC-enabled mutual authentication
+Protocols: Hybrid encryption (Kyber + AES), PQC-based mutual auth
