@@ -1,9 +1,9 @@
-🛡️ Post-Quantum Security Toolkit
+Post-Quantum Security Toolkit
 
 This repo is a hands-on collection of real-world examples showing how to build applications that can stand up to the cryptographic challenges of the quantum era.
 From authentication systems to secure file sharing and encrypted messaging, everything here is designed to give you practical, working code for quantum-safe deployments — no toy examples, no skipped steps.
 
-🔹 What’s Inside
+What’s Inside
 1. PQC-based Authentication for Cloud Apps
 
 A working setup for authenticating clients and servers using the Dilithium signature scheme.
@@ -29,7 +29,7 @@ It’s fast, verifiable, and immune to replay attacks.
 A demo of how to establish VPN tunnels and peer-to-peer messaging channels using Kyber for the key exchange.
 Supports forward secrecy by re-keying regularly.
 
-📚 Built With
+Built With
 
 Languages: Python, C
 
